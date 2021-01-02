@@ -30,8 +30,9 @@ function deposit(address asset, uint256 amount, address receiver){}
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| asset  | address  | receiver|
-| amount  | uint256  | address|
+| `asset`  | address  | |
+| `amount`  | uint256  | |
+|`receiver`|address||
 
 function withdraw(address asset, uint256 amount, address receiver){}  
 function borrow(address asset, uint256 borrowingAmount, uint256 interestRate, address receiver){}  
