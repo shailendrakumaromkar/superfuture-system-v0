@@ -85,14 +85,14 @@ f. function requestedBorrowingAmount (uint256 creditScore, address borrowerAddre
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| `creditScore`  | uint256  | Credit score of a  borrower:  i.  creditScore >300 & creditScore <579  %allowedLoanAmount = 20|
+| `creditScore`  | uint256  | Credit score of a  borrower:  <br> i.  creditScore >300 & creditScore <579  <br> %allowedLoanAmount = 20|
 | `borrowerAddress`  | address  | Address of borrower|
 |`receiver`|address||
 
 
 |   |   |   |   |   |
 |---|---|---|---|---|
-|   |   |   |   | Credit score of a  borrower:  i.  creditScore >300 & creditScore <579  %allowedLoanAmount = 20  |
+|   |   |   |   | Credit score of a  borrower:  <br>  i.  creditScore >300 & creditScore <579  <br>  %allowedLoanAmount = 20  |
 |   |   |   |   |   |
 |   |   |   |   |   |
 
