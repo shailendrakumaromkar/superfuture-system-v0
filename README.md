@@ -109,14 +109,21 @@ g. function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 as
 |`assetSupply`|uint256|Supply of asset available in pool |
 
 
-| Credit Score| Collatoral Ratio% |Utilisation |
-| ------------- | ------------- | ------------- |
-| `creditStore`  | uint8  |Credit score of borrower |
-| `collateralRatio`  | uint8  | Collateral Ratio  atleast 120% |
-|`assetSupply`|uint256|Supply of asset available in pool |
+| Credit Score| Collatoral Ratio% |Utilisation Rate%  |Interest Rate%|
+| ------------- | ------------- | ------------- |------------- |
+|850|||
+||||
+||||
+||||
+||||
+||||
+||||
+||||
 
 
-| Credit Score | Collatoral Ratio% | Utilisation Rate% | Interest Rate% |
+
+
+| Credit Score | Collatoral Ratio% | | Interest Rate% |
 | ------------ | ------------- | ------------- |
 | 850 | 400 | 100 | 10 |
 | 800 | 350 | 90 | 20 |
