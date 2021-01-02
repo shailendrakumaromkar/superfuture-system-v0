@@ -109,20 +109,13 @@ g. function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 as
 
 
 |Credit Score|Collatoral Ratio%|Utilisation Rate%|Interest Rate%|
-
+| ------------- | ------------- | ------------- |
 |850|400|100|10|
-
 |800|350|90|20|
-
 |700|300|75|30|
-
 |600|250|50|40|
-
 |500|200|25|50|
-
 |400|150|10|60|
-
-
 |300|120|0|70|
 
 ## Assignment2
