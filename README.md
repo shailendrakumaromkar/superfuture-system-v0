@@ -127,20 +127,33 @@ function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 asset
 
 
 ##### liquidationCall()  
-function liquidationCall() public returns (){}
+function liquidationCall(address collateral, address asset, address borrower, uint256 debtAmount) public returns (){}
 
-##### liquidationCall()  
+| Parameter Name | Type |Description |
+| ------------- | ------------- | ------------- |
+| `collateral`  | address  |address of the collateral reserve |
+| `asset`  | address  | address of the debt asset|
+|`borrower`|address|address of borrower |
+|`debtAmount`|uint256|amount of asset debt that the liquidator will repay|
+
+
+##### getUserData()  
 function getUserData(address user) public returns() {}
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
 | `user`  | address  |Address of user |
 
+###### Return values
+
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| `creditStore`  | uint8  |Credit score of borrower |
-| `collateralRatio`  | uint8  | Collateral Ratio  atleast 120% |
-|`assetSupply`|uint256|Supply of asset available in pool |
+| `totalCollateralETH`  | uint256  |total collateral in ETH of the user|
+| `totalDebtETH`  | uint256  | total debt in ETH of the user |
+|`availableBorrowsETH`|uint256|borrowing power left of the user |
+|`currentLiquidationThreshold`|uint256|liquidation threshold of the user|
+|ltv|uint256|Loan To Value of the user|
+|healthFactor|uint256|current health factor of the user|
 
 
 ## Assignment2
