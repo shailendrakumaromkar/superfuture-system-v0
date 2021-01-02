@@ -115,9 +115,10 @@ contract Betting {
        7. 3rd player will not receive any amount as per requirement specs
        8. For cross-check purpose returning Random Number, to be fair
        
-       Note: Initially I thought of using odd/even number but this will be partial
+       Note: Initially I thought of using odd/even number but this will be partial to 3rd player
              And one player will always be a loser
-             So change the implmentation approach & adopted as above mentioned
+             So change the implmentation approach & adopted new one as above mentioned
+             For 2 players game Odd-Even approach can be used
     */
     function selectWinner() onlyAdmin bettingStatus public{
         require(isAdminFeeDeducted == true,"Admin fee not yet deducted");
