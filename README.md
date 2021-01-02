@@ -68,8 +68,8 @@ function withdraw(string type, address asset, uint256 amount, address receiver) 
 |`receiver`|address| Who will recieve the amount back to his account|
 
 
-##### setUserUseReserveAsCollateral()
-function checkAllowedCollateral(address asset, bool acceptableCollateral) public returns (bool) {}
+##### checkAllowedCollateral()
+function checkAllowedCollateral(address asset, bool allowedeCollateral) public returns (bool) {}
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
