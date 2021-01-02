@@ -27,6 +27,12 @@ Create Architecture Diagram with below smart contract function details:
 
 
 function deposit(address asset, uint256 amount, address receiver){}  
+
+| Parameter Name | Type |Description |
+| ------------- | ------------- | ------------- |
+| asset  | address  | receiver|
+| amount  | uint256  | address|
+
 function withdraw(address asset, uint256 amount, address receiver){}  
 function borrow(address asset, uint256 borrowingAmount, uint256 interestRate, address receiver){}  
 function repay(address asset, uint256 borrowingAmount, uint256 interestRate, address sender){}  
