@@ -72,38 +72,30 @@ d. function repay(string type,address asset, uint256 repayAmount, uint256 intere
 | `repayAmount`  | uint256  |Amounnt to be repay |
 |`repayer`|address| Address of repayer, external person can also repay amount on bhalf of borrower |
 
-e. function creditScore(address borrower) public returns (uint256) {}  
+e. function creditScore(address borrower) public returns (uint8) {}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
 | `borrower`  | Address|Address of borrower whose Credit Score to be fetched |
 
-function 
 
 
-f. function requestedBorrowingAmount (uint256 creditScore, address borrowerAddress) public returns (uint256){}  
+f. function requestedBorrowingAmount (uint8 creditScore, address borrowerAddress) public returns (uint256){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| `creditScore`  | uint256  | Credit score of a  borrower:  <br> 1.  creditScore >300 & creditScore <579  <br> allowedLoanAmount = 20% <br>  <br> 2.  creditScore >580 & creditScore <669  <br> allowedLoanAmount = 50% <br>  <br> 3.  creditScore >670 & creditScore <739  <br> allowedLoanAmount = 60% <br>  <br> 4.  creditScore >740 & creditScore <799  <br> allowedLoanAmount = 70% <br>  <br> i.  creditScore >800 & creditScore <850  <br> allowedLoanAmount = 80 <br> |
+| `creditScore`  | uint8  | Credit score of a  borrower:  <br> 1.  creditScore >300 & creditScore <579  <br> allowedBorrowingAmount = 20% <br>  <br> 2.  creditScore >580 & creditScore <669  <br> allowedBorrowingAmount = 50% <br>  <br> 3.  creditScore >670 & creditScore <739  <br> allowedBorrowingAmount = 60% <br>  <br> 4.  creditScore >740 & creditScore <799  <br> allowedBorrowingAmount = 70% <br>  <br> i.  creditScore >800 & creditScore <850  <br> allowedBorrowingAmount = 80% <br> |
 | `borrowerAddress`  | address  | Address of borrower|
 
 
-g. function borrowerInterest(){}  
+g. function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 assetSupply ){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| `asset`  | address  | |
-| `amount`  | uint256  | |
-|`receiver`|address||
+| `creditStore`  | uint8  |Credit score of borrower |
+| `collateralRatio`  | uint8  | Collateral Ratio  atleast 120% |
+|`assetSupply`|uint256|Supply of asset available in pool |
 
-h. function borrowRepay(address _borrowe, uint256 _amount) public returns  (bool){}  
-
-| Parameter Name | Type |Description |
-| ------------- | ------------- | ------------- |
-| `asset`  | address  | |
-| `amount`  | uint256  | |
-|`receiver`|address||
 
 ## Assignment2
 2. Create and deploy (to testnet) a very simple smart contract system that does the
