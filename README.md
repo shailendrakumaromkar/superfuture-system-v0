@@ -32,7 +32,7 @@ a. function deposit(address asset, uint256 amount, address depositor){}
 | ------------- | ------------- | ------------- |
 | `asset`  | address  | Address of asset e.g. ETH & USDC |
 | `amount`  | uint256  | Amount to deposit|
-|`depositor`|address| Address of depositor, external person can also deposit to same account on behalf of depositor|
+|`depositor`|address| Address of depositor,   external person can also deposit to same account on behalf of depositor|
 
 b. function withdraw(address asset, uint256 amount, address receiver){}  
 
