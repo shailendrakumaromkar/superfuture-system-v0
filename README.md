@@ -67,6 +67,16 @@ function withdraw(string type, address asset, uint256 amount, address receiver) 
 | `amount`  | uint256  | Amount to withdraw|
 |`receiver`|address| Who will recieve the amount back to his account|
 
+
+##### setUserUseReserveAsCollateral()
+function checkAllowedCollateral(address asset, bool acceptableCollateral) public returns (bool) {}
+
+| Parameter Name | Type |Description |
+| ------------- | ------------- | ------------- |
+| `asset`  | address  | Address of asset - "ETH" & "USDC"|
+| `allowedeCollateral`  | bool  | true if the asset should be used as collateral <br> ETH = true|
+
+
 ##### borrow()  
 function borrow(string type, address asset, uint256 borrowingAmount, uint256 interestRate, address borrower) public returns  (bool){}  
 
