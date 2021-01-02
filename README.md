@@ -115,8 +115,9 @@ g. function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 as
 | `collateralRatio`  | uint8  | Collateral Ratio  atleast 120% |
 |`assetSupply`|uint256|Supply of asset available in pool |
 
+
 | Credit Score | Collatoral Ratio% | Utilisation Rate% | Interest Rate% |
-| ------------- | ------------- | ------------- |
+| ------------ | ------------- | ------------- |
 | 850 | 400 | 100 | 10 |
 | 800 | 350 | 90 | 20 |
 | 700 | 300 | 75 | 30 |
@@ -124,6 +125,10 @@ g. function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 as
 | 500 | 200 | 25 | 50 | 
 | 400 | 150 | 10 | 60 |
 | 300 | 120 | 0 | 70 |
+
+
+||||
+|---|---|---|
 
 ## Assignment2
 2. Create and deploy (to testnet) a very simple smart contract system that does the
