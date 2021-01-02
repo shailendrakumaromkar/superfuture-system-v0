@@ -26,13 +26,13 @@ NOTE:
 Create Architecture Diagram with below smart contract function details:
 
 
-a. function deposit(address asset, uint256 amount, address receiver){}  
+a. function deposit(address asset, uint256 amount, address depositor){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| `asset`  | address  | |
-| `amount`  | uint256  | |
-|`receiver`|address||
+| `asset`  | address  | Address of asset e.g. ETH & USDC |
+| `amount`  | uint256  | Amount to deposit|
+|`depositor`|address| Address of depositor, external person can also deposit to same account on behalf of depositor|
 
 b. function withdraw(address asset, uint256 amount, address receiver){}  
 
