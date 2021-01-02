@@ -66,6 +66,7 @@ b. function withdraw(string type, address asset, uint256 amount, address receive
 |`receiver`|address| Who will recieve the amount back to his account|
 
 c. function borrow(string type, address asset, uint256 borrowingAmount, uint256 interestRate, address borrower) public returns  (bool){}  
+
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
 |`type`|string|Type of cryptocurrency to borrow "ETH" , "USDC"|
@@ -107,6 +108,12 @@ g. function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 as
 | `collateralRatio`  | uint8  | Collateral Ratio  atleast 120% |
 |`assetSupply`|uint256|Supply of asset available in pool |
 
+
+| Credit Score| Collatoral Ratio% |Utilisation |
+| ------------- | ------------- | ------------- |
+| `creditStore`  | uint8  |Credit score of borrower |
+| `collateralRatio`  | uint8  | Collateral Ratio  atleast 120% |
+|`assetSupply`|uint256|Supply of asset available in pool |
 
 | Credit Score | Collatoral Ratio% | Utilisation Rate% | Interest Rate% |
 | ------------- | ------------- | ------------- |
