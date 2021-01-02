@@ -16,6 +16,10 @@ contract Betting {
     bool public isAdminFeeDeducted;
     uint8 public randomNumber;
     
+    /* Mapping between individual Players & their total bet amount
+    */
+    mapping(address => uint256) public playersTotalBet;
+    
     /* Defining modifier for admin of Contract
     */
     modifier onlyAdmin() {
@@ -70,6 +74,7 @@ contract Betting {
     function betAmount() payable minimumBetAmount bettingStatus adminNotEligible public{
         players.push(msg.sender); 
         totalBetAmount = totalBetAmount + msg.value;
+        playersTotalBet[msg.sender]+=msg.value;
     } 
     
     /* This function will give Smart Contract total balance amount
@@ -115,6 +120,7 @@ contract Betting {
              So change the implmentation approach & adopted as above mentioned
     */
     function selectWinner() onlyAdmin bettingStatus public{
+        require(isAdminFeeDeducted == true,"Admin fee not yet deducted");
         randomNumber = uint8(uint256(keccak256(abi.encodePacked(block.difficulty, block.timestamp, players.length))))%100;
 
         /* DEPRECATED IMPLMENTATION as mentioned above
