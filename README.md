@@ -89,6 +89,13 @@ f. function requestedBorrowingAmount (uint256 creditScore, address borrowerAddre
 | `borrowerAddress`  | address  | Address of borrower|
 |`receiver`|address||
 
+
+|   |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   | Credit score of a  borrower:  i.  creditScore >300 & creditScore <579  %allowedLoanAmount = 20  |
+|   |   |   |   |   |
+|   |   |   |   |   |
+
 g. function borrowerInterest(){}  
 
 | Parameter Name | Type |Description |
