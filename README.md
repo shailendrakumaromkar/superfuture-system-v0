@@ -37,7 +37,7 @@ a. function deposit(string type, address asset, uint256 amount, address deposito
 |`type`|string| Type of cryptocurrency to deposit "ETH" , "USDC"|
 | `asset`  | address  | Address of asset - "ETH" , "USDC" |
 | `amount`  | uint256  | Amount to deposit|
-|`depositor`|address| Address of depositor,   external person can also deposit to same account on behalf of depositor|
+|`depositor`|address| Address of depositor, external person can also deposit to same account on behalf of depositor|
 
 b. function withdraw(string type, address asset, uint256 amount, address receiver) onlyDepositor{}  
 
@@ -48,7 +48,7 @@ b. function withdraw(string type, address asset, uint256 amount, address receive
 | `amount`  | uint256  | Amount to withdraw|
 |`receiver`|address| Who will recieve the amount back to his account|
 
-c. function borrow(string type, address asset, uint256 borrowingAmount, uint256 interestRate, address receiver){}  
+c. function borrow(string type, address asset, uint256 borrowingAmount, uint256 interestRate, address borrower){}  
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
 |`type`|string|Type of cryptocurrency to borrow "ETH" , "USDC"|
@@ -57,13 +57,14 @@ c. function borrow(string type, address asset, uint256 borrowingAmount, uint256 
 |`interestRate`|uint256|Interest rate to be levied based on f(A)|
 |`receiver`|address|Borrower address|
 
-d. function repay(address asset, uint256 borrowingAmount, uint256 interestRate, address sender){}  
+d. function repay(string type,address asset, uint256 repayAmount, uint256 interestRate, address repayer){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| `asset`  | address  | |
-| `amount`  | uint256  | |
-|`receiver`|address||
+|`type`|string|Type of cryptocurrency to repay "ETH" , "USDC"|
+| `asset`  | address  |Address of asset - "ETH" & "USDC" |
+| `repayAmount`  | uint256  |Amounnt to be repay |
+|`repayer`|address| Address of repayer, external person can also repay amount on bhalf of borrower |
 
 e. function creditScore(address _borrower){}  
 
