@@ -29,6 +29,18 @@ NOTE:
 about the various parameters and organization of code in a clean way
 
 
+### Solution
+Create Architecture Diagram with below smart contract function details:
+
+
+function deposit(address asset, uint256 amount, address receiver){}
+function withdraw(address asset, uint256 amount, address receiver){}
+function borrow(address asset, uint256 borrowingAmount, uint256 interestRate, address receiver){}
+function repay(address asset, uint256 borrowingAmount, uint256 interestRate, address sender){}
+function creditScore(address _borrower){}
+function requestedBorrowingAmount (uint256 _creditScore, address _borrowerAddress){}
+function borrowerInterest(){}
+function borrowRepay(address _borrowe, uint256 _amount) public returns  (bool){}
 
 ## Assignment2
 Written Smart Contract base on below requirement specs-
