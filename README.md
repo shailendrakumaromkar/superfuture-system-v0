@@ -44,7 +44,7 @@ function borrowRepay(address _borrowe, uint256 _amount) public returns  (bool){}
 
 ## Assignment2
 2. Create and deploy (to testnet) a very simple smart contract system that does the
-following:
+following:  
 a.  Allows 3 users to bet amount X.  
 b.  Take 1% fees from amount 3X into owner’s account. Amount left now should be 2.97X  
 c.  Generate random number. Based on the random number, sends 2.97*X*2/3 to one user, returns 2.97*X/3 to another user and 0 to the last user. (zero-sum game)  
@@ -54,5 +54,7 @@ the above lottery system (using web3 calls or however else), as well as the volu
 user.
 
 ### Solution
-Written Smart Contract base on below requirement specs-
+Written Smart Contract base on below requirement specs above mentioned-
 
+Betting.sol  
+web3.JS
