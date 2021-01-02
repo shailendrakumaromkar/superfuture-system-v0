@@ -25,29 +25,37 @@ NOTE:
 ### Solution
 Create Architecture Diagram with below smart contract function details:
 
+#### Modifier List
+a. onlyDepositor() {}
+b. 
 
-a. function deposit(address asset, uint256 amount, address depositor){}  
+#### Function List
+a. function deposit(string type, address asset, uint256 amount, address depositor){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| `asset`  | address  | Address of asset e.g. ETH & USDC |
+|`type`|string| Type of cryptocurrency to deposit "ETH" , "USDC"|
+| `asset`  | address  | Address of asset - "ETH" , "USDC" |
 | `amount`  | uint256  | Amount to deposit|
 |`depositor`|address| Address of depositor,   external person can also deposit to same account on behalf of depositor|
 
-b. function withdraw(address asset, uint256 amount, address receiver){}  
+b. function withdraw(string type, address asset, uint256 amount, address receiver) onlyDepositor{}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| `asset`  | address  | |
-| `amount`  | uint256  | |
-|`receiver`|address||
+|`type`|string|Type of cryptocurrency to deposit "ETH" , "USDC"|
+| `asset`  | address  | Address of asset - "ETH" & "USDC"|
+| `amount`  | uint256  | Amount to withdraw|
+|`receiver`|address| Who will recieve the amount back to his account|
 
-c. function borrow(address asset, uint256 borrowingAmount, uint256 interestRate, address receiver){}  
+c. function borrow(string type, address asset, uint256 borrowingAmount, uint256 interestRate, address receiver){}  
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| `asset`  | address  | |
-| `amount`  | uint256  | |
-|`receiver`|address||
+|`type`|string|Type of cryptocurrency to borrow "ETH" , "USDC"|
+| `asset`  | address  | Address of asset - "ETH" & "USDC" |
+| `borrowingAmount`  | uint256  |Amount to borrow |
+|`interestRate`|uint256|Interest rate to be levied based on f(A)|
+|`receiver`|address|Borrower address|
 
 d. function repay(address asset, uint256 borrowingAmount, uint256 interestRate, address sender){}  
 
