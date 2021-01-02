@@ -35,13 +35,59 @@ function deposit(address asset, uint256 amount, address receiver){}
 |`receiver`|address||
 
 function withdraw(address asset, uint256 amount, address receiver){}  
+
+| Parameter Name | Type |Description |
+| ------------- | ------------- | ------------- |
+| `asset`  | address  | |
+| `amount`  | uint256  | |
+|`receiver`|address||
+
 function borrow(address asset, uint256 borrowingAmount, uint256 interestRate, address receiver){}  
+| Parameter Name | Type |Description |
+| ------------- | ------------- | ------------- |
+| `asset`  | address  | |
+| `amount`  | uint256  | |
+|`receiver`|address||
+
 function repay(address asset, uint256 borrowingAmount, uint256 interestRate, address sender){}  
+
+| Parameter Name | Type |Description |
+| ------------- | ------------- | ------------- |
+| `asset`  | address  | |
+| `amount`  | uint256  | |
+|`receiver`|address||
+
 function creditScore(address _borrower){}  
+
+| Parameter Name | Type |Description |
+| ------------- | ------------- | ------------- |
+| `asset`  | address  | |
+| `amount`  | uint256  | |
+|`receiver`|address||
+
 function requestedBorrowingAmount (uint256 _creditScore, address _borrowerAddress){}  
+
+| Parameter Name | Type |Description |
+| ------------- | ------------- | ------------- |
+| `asset`  | address  | |
+| `amount`  | uint256  | |
+|`receiver`|address||
+
 function borrowerInterest(){}  
+
+| Parameter Name | Type |Description |
+| ------------- | ------------- | ------------- |
+| `asset`  | address  | |
+| `amount`  | uint256  | |
+|`receiver`|address||
+
 function borrowRepay(address _borrowe, uint256 _amount) public returns  (bool){}  
 
+| Parameter Name | Type |Description |
+| ------------- | ------------- | ------------- |
+| `asset`  | address  | |
+| `amount`  | uint256  | |
+|`receiver`|address||
 ## Assignment2
 2. Create and deploy (to testnet) a very simple smart contract system that does the
 following:  
