@@ -30,7 +30,7 @@ a. onlyDepositor() {}
 b. 
 
 #### Function List
-a. function deposit(string type, address asset, uint256 amount, address depositor){}  
+a. function deposit(string type, address asset, uint256 amount, address depositor) public returns (bool) {}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
@@ -39,7 +39,7 @@ a. function deposit(string type, address asset, uint256 amount, address deposito
 | `amount`  | uint256  | Amount to deposit|
 |`depositor`|address| Address of depositor, external person can also deposit to same account on behalf of depositor|
 
-b. function withdraw(string type, address asset, uint256 amount, address receiver) onlyDepositor{}  
+b. function withdraw(string type, address asset, uint256 amount, address receiver) onlyDepositor public returns  (bool){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
@@ -48,7 +48,7 @@ b. function withdraw(string type, address asset, uint256 amount, address receive
 | `amount`  | uint256  | Amount to withdraw|
 |`receiver`|address| Who will recieve the amount back to his account|
 
-c. function borrow(string type, address asset, uint256 borrowingAmount, uint256 interestRate, address borrower){}  
+c. function borrow(string type, address asset, uint256 borrowingAmount, uint256 interestRate, address borrower) public returns  (bool){}  
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
 |`type`|string|Type of cryptocurrency to borrow "ETH" , "USDC"|
@@ -57,7 +57,7 @@ c. function borrow(string type, address asset, uint256 borrowingAmount, uint256 
 |`interestRate`|uint256|Interest rate to be levied based on f(A)|
 |`receiver`|address|Borrower address|
 
-d. function repay(string type,address asset, uint256 repayAmount, uint256 interestRate, address repayer){}  
+d. function repay(string type,address asset, uint256 repayAmount, uint256 interestRate, address repayer) public returns  (bool){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
@@ -66,20 +66,22 @@ d. function repay(string type,address asset, uint256 repayAmount, uint256 intere
 | `repayAmount`  | uint256  |Amounnt to be repay |
 |`repayer`|address| Address of repayer, external person can also repay amount on bhalf of borrower |
 
-e. function creditScore(address _borrower){}  
+e. function creditScore(address borrower) public returns (uint256) {}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| `asset`  | address  | |
-| `amount`  | uint256  | |
-|`receiver`|address||
+| `borrower`  | Address|Address of borrower whose Credit Score to be fetched |
 
-f. function requestedBorrowingAmount (uint256 _creditScore, address _borrowerAddress){}  
+function 
+
+
+f. function requestedBorrowingAmount (uint256 creditScore, address borrowerAddress) public returns (uint256){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| `asset`  | address  | |
-| `amount`  | uint256  | |
+| `creditScore`  | uint256  | Credit score of a  borrower:  i.  creditScore >300 & creditScore <579
+                                                                %allowedLoanAmount = 20|
+| `borrowerAddress`  | address  | Address of borrower|
 |`receiver`|address||
 
 g. function borrowerInterest(){}  
