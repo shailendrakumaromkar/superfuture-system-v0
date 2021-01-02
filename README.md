@@ -3,30 +3,23 @@
 ## Assignment1
 
 1. Create the architecture of a smart contract based system that has the following
-properties:
-a. Lenders can deposit ETH and USDC into Bank A
-b. Borrowers can deposit ETH as collateral and borrow
-c. Bank A can find out the credit score C of any Borrower B
-d. Borrower B can borrow from Bank A an amount up to a function of the credit
-score = f(A)
-e. The borrow interest rate is decided by the credit score = I(A), the collateral ratio
-and the supply of the borrowed asset. If the borrower has deposited more
-collateral, then the interest rate is lower. If the supply of the borrowed asset is low
-and the demand is high, the interest rate is higher.
-f. The collateral ratio is at least 120%. Liquidation happens at 100%.
-g. Borrower receives collateral - interest_paid back when the borrowed amount is
-returned.
-h. Bank A deposits any unused ETH and USDC into compound and aave to collect
-interest
-You do not need to deploy these contracts on the testnet/mainnet. Please do the following:
-- Draw Out the Architecture diagram - Show how smart contracts are structured and
-interact with each other.
-- Write the functions that need to be created in order for the above smart contracts to work
-with each other. Example: function transfer ( address dst , uint256 amount ){}
-NOTE:
-- What is the point of the above task?
-- We will be building a similar system above and want to understand how you think
-about the various parameters and organization of code in a clean way
+properties:  
+a. Lenders can deposit ETH and USDC into Bank A  
+b. Borrowers can deposit ETH as collateral and borrow  
+c. Bank A can find out the credit score C of any Borrower B  
+d. Borrower B can borrow from Bank A an amount up to a function of the credit score = f(A)  
+e. The borrow interest rate is decided by the credit score = I(A), the collateral ratio and the supply of the borrowed asset. If the borrower has deposited more
+collateral, then the interest rate is lower. If the supply of the borrowed asset is low and the demand is high, the interest rate is higher.  
+f. The collateral ratio is at least 120%. Liquidation happens at 100%.  
+g. Borrower receives collateral - interest_paid back when the borrowed amount is returned.  
+h. Bank A deposits any unused ETH and USDC into compound and aave to collect interest  
+
+You do not need to deploy these contracts on the testnet/mainnet. Please do the following:  
+- Draw Out the Architecture diagram - Show how smart contracts are structured and interact with each other.  
+- Write the functions that need to be created in order for the above smart contracts to work with each other. Example: function transfer ( address dst , uint256 amount ){}  
+NOTE:  
+- What is the point of the above task?  
+- We will be building a similar system above and want to understand how you think about the various parameters and organization of code in a clean way  
 
 
 ### Solution
