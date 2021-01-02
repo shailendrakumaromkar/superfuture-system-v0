@@ -26,7 +26,7 @@ NOTE:
 Create Architecture Diagram with below smart contract function details:
 
 #### State variable
-
+uint8 closeFactor = 0.5
 
 #### Struct
 
@@ -46,8 +46,9 @@ b.
 
 
 
-#### Functions
-a. function deposit(string type, address asset, uint256 amount, address depositor) public returns (bool) {}  
+#### Methods
+##### deposit()  
+function deposit(string type, address asset, uint256 amount, address depositor) public returns (bool) {}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
@@ -56,7 +57,8 @@ a. function deposit(string type, address asset, uint256 amount, address deposito
 | `amount`  | uint256  | Amount to deposit|
 |`depositor`|address| Address of depositor, external person can also deposit to same account on behalf of depositor|
 
-b. function withdraw(string type, address asset, uint256 amount, address receiver) onlyDepositor public returns  (bool){}  
+##### withdraw()  
+function withdraw(string type, address asset, uint256 amount, address receiver) onlyDepositor public returns  (bool){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
@@ -65,7 +67,8 @@ b. function withdraw(string type, address asset, uint256 amount, address receive
 | `amount`  | uint256  | Amount to withdraw|
 |`receiver`|address| Who will recieve the amount back to his account|
 
-c. function borrow(string type, address asset, uint256 borrowingAmount, uint256 interestRate, address borrower) public returns  (bool){}  
+##### borrow()  
+function borrow(string type, address asset, uint256 borrowingAmount, uint256 interestRate, address borrower) public returns  (bool){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
@@ -75,7 +78,8 @@ c. function borrow(string type, address asset, uint256 borrowingAmount, uint256 
 |`interestRate`|uint256|Interest rate to be levied based on f(A)|
 |`receiver`|address|Borrower address|
 
-d. function repay(string type,address asset, uint256 repayAmount, uint256 interestRate, address repayer) public returns  (bool){}  
+##### repay()  
+function repay(string type,address asset, uint256 repayAmount, uint256 interestRate, address repayer) public returns  (bool){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
@@ -84,14 +88,15 @@ d. function repay(string type,address asset, uint256 repayAmount, uint256 intere
 | `repayAmount`  | uint256  |Amounnt to be repay = collateral + interest|
 |`repayer`|address| Address of repayer, external person can also repay amount on bhalf of borrower |
 
-e. function creditScore(address borrower) public returns (uint8) {}  
+##### creditScore()  
+function creditScore(address borrower) public returns (uint8) {}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
 | `borrower`  | Address|Address of borrower whose Credit Score to be fetched |
 
 
-
+##### allowedBorrowingAmount()  
 f. function allowedBorrowingAmount (uint8 creditScore, address borrowerAddress) public returns (uint256){}  
 
 | Parameter Name | Type |Description |
@@ -100,7 +105,8 @@ f. function allowedBorrowingAmount (uint8 creditScore, address borrowerAddress) 
 | `borrowerAddress`  | address  | Address of borrower|
 
 
-g. function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 assetSupply ){}  
+##### borrowerInterest()  
+function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 assetSupply ){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
@@ -120,6 +126,23 @@ g. function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 as
 |300|120|0|70|
 
 
+##### liquidationCall()  
+function liquidationCall() public returns (){}
+
+##### liquidationCall()  
+function getUserData(address user) public returns() {}
+
+| Parameter Name | Type |Description |
+| ------------- | ------------- | ------------- |
+| `user`  | address  |Address of user |
+
+| Parameter Name | Type |Description |
+| ------------- | ------------- | ------------- |
+| `creditStore`  | uint8  |Credit score of borrower |
+| `collateralRatio`  | uint8  | Collateral Ratio  atleast 120% |
+|`assetSupply`|uint256|Supply of asset available in pool |
+
+
 ## Assignment2
 2. Create and deploy (to testnet) a very simple smart contract system that does the
 following:  
@@ -135,4 +158,5 @@ user.
 Written Smart Contract base on below requirement specs above mentioned-
 
 Betting.sol  
-web3.JS
+
+##### borrowerInterest()  web3.JS
