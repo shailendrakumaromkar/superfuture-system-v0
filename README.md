@@ -127,13 +127,13 @@ function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 asset
 
 | Credit Score| Collatoral Ratio% |Utilisation Rate%  |Interest Rate%|
 | ------------- | ------------- | ------------- |------------- |
-|850|400|100|10|
-|800|350|90|20|
-|700|300|75|30|
+|850|400|0|10|
+|800|350|10|20|
+|700|300|25|30|
 |600|250|50|40|
-|500|200|25|50|
-|400|150|10|60|
-|300|120|0|70|
+|500|200|75|50|
+|400|150|90|60|
+|300|120|95|70|
 
 
 ##### liquidationCall()  
