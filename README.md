@@ -33,29 +33,26 @@ about the various parameters and organization of code in a clean way
 Create Architecture Diagram with below smart contract function details:
 
 
-function deposit(address asset, uint256 amount, address receiver){}
-function withdraw(address asset, uint256 amount, address receiver){}
-function borrow(address asset, uint256 borrowingAmount, uint256 interestRate, address receiver){}
-function repay(address asset, uint256 borrowingAmount, uint256 interestRate, address sender){}
-function creditScore(address _borrower){}
-function requestedBorrowingAmount (uint256 _creditScore, address _borrowerAddress){}
-function borrowerInterest(){}
-function borrowRepay(address _borrowe, uint256 _amount) public returns  (bool){}
+function deposit(address asset, uint256 amount, address receiver){}  
+function withdraw(address asset, uint256 amount, address receiver){}  
+function borrow(address asset, uint256 borrowingAmount, uint256 interestRate, address receiver){}  
+function repay(address asset, uint256 borrowingAmount, uint256 interestRate, address sender){}  
+function creditScore(address _borrower){}  
+function requestedBorrowingAmount (uint256 _creditScore, address _borrowerAddress){}  
+function borrowerInterest(){}  
+function borrowRepay(address _borrowe, uint256 _amount) public returns  (bool){}  
 
 ## Assignment2
-Written Smart Contract base on below requirement specs-
-
 2. Create and deploy (to testnet) a very simple smart contract system that does the
 following:
-a.  Allows 3 users to bet amount X.
-b.  Take 1% fees from amount 3X into owner’s account. Amount left now should be
-2.97X
-c.  Generate random number. Based on the random number, sends 2.97*X*2/3 to
-one user, returns 2.97*X/3 to another user and 0 to the last user. (zero-sum
-game)
+a.  Allows 3 users to bet amount X.  
+b.  Take 1% fees from amount 3X into owner’s account. Amount left now should be 2.97X  
+c.  Generate random number. Based on the random number, sends 2.97*X*2/3 to one user, returns 2.97*X/3 to another user and 0 to the last user. (zero-sum game)  
 You do not need a complex front-end, just needs to work.
 After the above is done, create a small script that pulls all addresses that have interacted with
 the above lottery system (using web3 calls or however else), as well as the volume of bets per
 user.
 
+### Solution
+Written Smart Contract base on below requirement specs-
 
