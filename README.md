@@ -25,17 +25,28 @@ NOTE:
 ### Solution
 Create Architecture Diagram with below smart contract function details:
 
-#### Modifier List
+#### State variable
+
+
+#### Struct
+
+
+#### Events
+
+
+#### Enums
+
+
+#### Mappings
+
+
+#### Modifiers
 a. onlyDepositor() {}
 b. 
 
-|   |   |   |   |   |
-|---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
 
-#### Function List
+
+#### Functions
 a. function deposit(string type, address asset, uint256 amount, address depositor) public returns (bool) {}  
 
 | Parameter Name | Type |Description |
@@ -84,7 +95,7 @@ f. function requestedBorrowingAmount (uint8 creditScore, address borrowerAddress
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
-| `creditScore`  | uint8  | Credit score of a  borrower:  <br> 1.  creditScore >300 & creditScore <579  <br> allowedBorrowingAmount = 20% <br>  <br> 2.  creditScore >580 & creditScore <669  <br> allowedBorrowingAmount = 50% <br>  <br> 3.  creditScore >670 & creditScore <739  <br> allowedBorrowingAmount = 60% <br>  <br> 4.  creditScore >740 & creditScore <799  <br> allowedBorrowingAmount = 70% <br>  <br> i.  creditScore >800 & creditScore <850  <br> allowedBorrowingAmount = 80% <br> |
+| `creditScore`  | uint8  | Credit score of a  borrower:  <br> 1.  creditScore >300 & creditScore <579  <br> allowedBorrowingAmount = 20% <br>  <br> 2.  creditScore >580 & creditScore <669  <br> allowedBorrowingAmount = 50% <br>  <br> 3.  creditScore >670 & creditScore <739  <br> allowedBorrowingAmount = 60% <br>  <br> 4.  creditScore >740 & creditScore <799  <br> allowedBorrowingAmount = 70% <br>  <br> 5.  creditScore >800 & creditScore <850  <br> allowedBorrowingAmount = 80% <br> |
 | `borrowerAddress`  | address  | Address of borrower|
 
 
