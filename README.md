@@ -80,7 +80,7 @@ d. function repay(string type,address asset, uint256 repayAmount, uint256 intere
 | ------------- | ------------- | ------------- |
 |`type`|string|Type of cryptocurrency to repay "ETH" , "USDC"|
 | `asset`  | address  |Address of asset - "ETH" & "USDC" |
-| `repayAmount`  | uint256  |Amounnt to be repay |
+| `repayAmount`  | uint256  |Amounnt to be repay = collateral + interest|
 |`repayer`|address| Address of repayer, external person can also repay amount on bhalf of borrower |
 
 e. function creditScore(address borrower) public returns (uint8) {}  
@@ -91,7 +91,7 @@ e. function creditScore(address borrower) public returns (uint8) {}
 
 
 
-f. function requestedBorrowingAmount (uint8 creditScore, address borrowerAddress) public returns (uint256){}  
+f. function allowedBorrowingAmount (uint8 creditScore, address borrowerAddress) public returns (uint256){}  
 
 | Parameter Name | Type |Description |
 | ------------- | ------------- | ------------- |
@@ -107,6 +107,23 @@ g. function borrowerInterest(uint8 creditStore,uint8 collateralRatio, uint256 as
 | `collateralRatio`  | uint8  | Collateral Ratio  atleast 120% |
 |`assetSupply`|uint256|Supply of asset available in pool |
 
+
+|Credit Score|Collatoral Ratio%|Utilisation Rate%|Interest Rate%|
+
+|850|400|100|10|
+
+|800|350|90|20|
+
+|700|300|75|30|
+
+|600|250|50|40|
+
+|500|200|25|50|
+
+|400|150|10|60|
+
+
+|300|120|0|70|
 
 ## Assignment2
 2. Create and deploy (to testnet) a very simple smart contract system that does the
